@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 5, 2016, 2:37:29 AM
+    Author     : Rafael
+*/
+
+body
+{
+    background-color: #009933;
+    background-image: url('images/grass.gif');
+    cursor:url('images/hammer.gif'), auto; 
+    
+}
+
+/*.cursorUp
+{
+   cursor:url('images/hammer.gif'), auto; 
+}
+
+.cursorDown
+{
+   cursor:url('images/hammer_press.gif'), auto;  
+}*/
+
+
+
+#whackTable td
+{
+    padding-left:200px;
+    padding-right:200px;
+    padding-top:100px;
+    padding-bottom:100px;
+    
+}
+
+#whackDiv
+{
+    height:100%;
+    width:100%;
+}
