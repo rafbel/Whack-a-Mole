@@ -7,22 +7,32 @@
 $(document).ready(function()
 {
     //$('body').addClass("cursorDown");
+    
+    //Plays music on load:
+    var music = new Audio('audio/Mii Channel Music.mp3');
+    playMusic();
+    
     var score = 0;
     $("#score").text("Score: " + score);
     var timer = 60;
+    $("#timer").text("Timer: " + timer);
     var whackImages = [];
     var moleStateMap = [];
+    
+    var recentlyWhacked = -1;
     
     preloadMoles();
     displayMoles();
 
     window.setInterval(function()
     {
-      if (timer >= 0)
+      if (timer > 0)
       {
         raiseMole();
         updateTimer();
       } 
+      if (timer === 0)
+          resetMoles();
       
     }, 1000);
 
@@ -71,7 +81,7 @@ $(document).ready(function()
     {
         var repetitionCounter = 0;
         var randomNumber = Math.floor((Math.random() * 12));
-        while (moleStateMap[randomNumber] === true)
+        while (moleStateMap[randomNumber] === true && randomNumber !== recentlyWhacked)
         {
            randomNumber = Math.floor((Math.random() * 12)); 
            repetitionCounter++;
@@ -85,9 +95,9 @@ $(document).ready(function()
     
     function updateTimer()
     {
-        
-        $("#timer").text("Timer: " + timer);
         timer--;
+        $("#timer").text("Timer: " + timer);
+        
     }
     
     $("#whackDiv").on("click","td",function()
@@ -95,6 +105,7 @@ $(document).ready(function()
         var location = $(this).attr('id');
         if (moleStateMap[location])
         {
+            recentlyWacked = location;
             moleStateMap[location] = false;
             displayMoles();
             updateScore();
@@ -106,6 +117,21 @@ $(document).ready(function()
     {
         score += 10;
         $("#score").text("Score: " + score);
+    }
+    
+    function playMusic()
+    {
+        //Plays music:
+        music.play();
+    }
+    
+    function resetMoles()
+    {
+        for (var counter = 0; counter < 12; counter++)
+            moleStateMap[counter] = false;
+        displayMoles();
+        recentlyWhacked = -1;
+        music.pause();
     }
     
 });
