@@ -42,3 +42,16 @@ body
     height:100%;
     width:100%;
 }
+
+#startButton
+{
+    transform: translate(-50%,-50%);
+    position:absolute;
+    left:50%;
+    top:10%;
+    width:120px;
+    height:60px;
+    cursor:url('images/hammer.gif'), auto;
+    background-color: #0077b3;
+    font-weight: bold;
+}

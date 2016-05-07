@@ -6,15 +6,21 @@
 
 $(document).ready(function()
 {
+
+    
+    
     //$('body').addClass("cursorDown");
     
     //Plays music on load:
     var music = new Audio('audio/Mii Channel Music.mp3');
-    playMusic();
+    
+    
+    //Starts whack sound
+    //var whackSound = new Audio('audio/Whack Sound Effect.mp3');
     
     var score = 0;
     $("#score").text("Score: " + score);
-    var timer = 60;
+    var timer = 0;
     $("#timer").text("Timer: " + timer);
     var whackImages = [];
     var moleStateMap = [];
@@ -32,7 +38,11 @@ $(document).ready(function()
         updateTimer();
       } 
       if (timer === 0)
+      {
           resetMoles();
+          resetGame();
+          
+      }
       
     }, 1000);
 
@@ -105,10 +115,13 @@ $(document).ready(function()
         var location = $(this).attr('id');
         if (moleStateMap[location])
         {
-            recentlyWacked = location;
+            //whackSound.play();
+            recentlyWhacked = location;
             moleStateMap[location] = false;
             displayMoles();
             updateScore();
+            if (Math.floor((Math.random() * 5) + 1) >= 4) //has a chance of spawning another mole after one is whacked
+                raiseMole();
         }
         
     });
@@ -119,11 +132,6 @@ $(document).ready(function()
         $("#score").text("Score: " + score);
     }
     
-    function playMusic()
-    {
-        //Plays music:
-        music.play();
-    }
     
     function resetMoles()
     {
@@ -132,6 +140,21 @@ $(document).ready(function()
         displayMoles();
         recentlyWhacked = -1;
         music.pause();
+    }
+    
+    $("#startButton").on("click",function()
+    {
+        //Starts the game
+        $(this).css({"visibility":"hidden"});
+        timer = 60;
+        music.play();
+    });
+    
+    function resetGame()
+    {
+        //alert("Game over! Your score was: " + score);
+        $("#startButton").css({"visibility":"visible"});
+        score = 0;
     }
     
 });
