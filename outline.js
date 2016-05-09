@@ -14,6 +14,10 @@ $(document).ready(function()
     //Plays music on load:
     var music = new Audio('audio/Mii Channel Music.mp3');
     
+    //Make it fit in screen:
+    $("whackDiv").css({"height":screen.height});
+    $("whackDiv").css({"width":screen.width});
+    
     
     //Starts whack sound
     //var whackSound = new Audio('audio/Whack Sound Effect.mp3');
