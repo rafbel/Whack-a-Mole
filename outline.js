@@ -7,8 +7,8 @@
 $(document).ready(function()
 {
     //CSS changes to page:
-    $('#body').css('min-height', '100%');
-    $('#body').css('min-width', '100%');
+    //$('#body').css('min-height', '100%');
+    //$('#body').css('min-width', '100%');
     
     
     //$('body').addClass("cursorDown");
