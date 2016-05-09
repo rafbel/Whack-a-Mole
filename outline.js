@@ -15,8 +15,7 @@ $(document).ready(function()
     var music = new Audio('audio/Mii Channel Music.mp3');
     
     //Make it fit in screen:
-    $("whackDiv").css({"height":$(window).height()});
-    $("whackDiv").css({"width":$(window).width()});
+
     
     
     //Starts whack sound
@@ -160,6 +159,14 @@ $(document).ready(function()
         $("#startButton").css({"visibility":"visible"});
         score = 0;
     }
+    
+    /*$(window).resize(function()
+    {
+        //$("whackDiv").css({"height":$(window).height()});
+       // $("whackDiv").css({"width":$(window).width()}); 
+       //window.resizeTo(screen.width,screen.height);
+       
+    });*/
     
 });
 
