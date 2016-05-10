@@ -64,9 +64,9 @@ body
     transform: translate(-50%,-50%);
     position:absolute;
     left:50%;
-    top:60%;
-    width:120px;
-    height:60px;
+    top:10%;
+    width:8%;
+    height:4%;
     cursor:url('images/hammer.gif'), auto;
     background-color: #0077b3;
     font-weight: bold;
