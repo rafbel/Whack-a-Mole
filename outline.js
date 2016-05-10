@@ -8,14 +8,9 @@ $(document).ready(function()
 {
     //CSS changes to page:
     makeCorrectSize();
-    
-    
 
-    
     //Plays music on load:
     var music = new Audio('audio/Mii Channel Music.mp3');
-    
-
 
     //alert(screen.width + "+"+ screen.height);
      
