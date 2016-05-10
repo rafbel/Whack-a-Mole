@@ -42,12 +42,13 @@ body
 
 #whackTable td
 {
-    padding-left:200px;
-    padding-right:200px;
-    padding-top:100px;
-    padding-bottom:100px;
+    width:33.3%;
+    height:120px;
+
     
 }
+
+
 
 #whackDiv
 {
