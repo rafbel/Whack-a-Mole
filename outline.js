@@ -89,6 +89,8 @@ $(document).ready(function()
                  $("#whackTable tbody").append("<td id='" +counter + "'>" + whackImages[0] + "</td>");
         }
         $("#whackTable tbody").append("</tr>");
+        $("#whackTable img").css('width', screen.width/5 + 'px');
+        $("#whackTable img").css('height', screen.height/5 + 'px');
     }
     
     function raiseMole()
@@ -175,6 +177,7 @@ $(document).ready(function()
         
         $('#whackDiv').css('height', screen.height + 'px');
         $("#whackDiv").css('width', screen.width + 'px');
+        
     }
     
 });
