@@ -7,16 +7,15 @@
 $(document).ready(function()
 {
     //CSS changes to page:
-    //$('#body').css('min-height', '100%');
-    //$('#body').css('min-width', '100%');
+    makeCorrectSize();
     
     
-    //$('body').addClass("cursorDown");
+
     
     //Plays music on load:
     var music = new Audio('audio/Mii Channel Music.mp3');
     
-    //Make it fit in screen:
+
 
     //alert(screen.width + "+"+ screen.height);
      
@@ -169,6 +168,12 @@ $(document).ready(function()
        //window.resizeTo(screen.width,screen.height);
        
     });*/
+    
+    function makeCorrectSize()
+    {
+        $('body').css('height', screen.height + 'px');
+        $('body').css('width', screen.width + 'px');
+    }
     
 });
 
