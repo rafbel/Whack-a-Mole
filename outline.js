@@ -171,6 +171,8 @@ $(document).ready(function()
     
     function makeCorrectSize()
     {
+
+        
         $('#whackDiv').css('height', screen.height + 'px');
         $("#whackDiv").css('width', screen.width + 'px');
     }

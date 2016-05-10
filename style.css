@@ -42,11 +42,12 @@ body
 
 #whackTable td
 {
-    width:33.3%;
+    width:33%;
     height:120px;
 
     
 }
+
 
 
 
@@ -63,7 +64,7 @@ body
     transform: translate(-50%,-50%);
     position:absolute;
     left:50%;
-    top:10%;
+    top:60%;
     width:120px;
     height:60px;
     cursor:url('images/hammer.gif'), auto;
