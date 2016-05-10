@@ -65,8 +65,8 @@ body
     position:absolute;
     left:50%;
     top:10%;
-    width:8%;
-    height:4%;
+    width:100px;
+    height:50px;
     cursor:url('images/hammer.gif'), auto;
     background-color: #0077b3;
     font-weight: bold;
