@@ -17,13 +17,13 @@ $(document).ready(function()
     
 
 
-    alert(screen.width + "+"+ screen.height);
+
      
     //Starts whack sound
     //var whackSound = new Audio('audio/Whack Sound Effect.mp3');
     
     var score = 0;
-    $("#score").text("Score: " + score);
+    $("#score").text("Score: " + score + " " + screen.width + "+"+ screen.height);
     var timer = 0;
     $("#timer").text("Timer: " + timer);
     var whackImages = [];
