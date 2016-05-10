@@ -18,8 +18,8 @@ $(document).ready(function()
     
     //Make it fit in screen:
 
-    
-    
+    //alert(screen.width + "+"+ screen.height);
+     
     //Starts whack sound
     //var whackSound = new Audio('audio/Whack Sound Effect.mp3');
     
