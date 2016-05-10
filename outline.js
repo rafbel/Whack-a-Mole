@@ -17,13 +17,13 @@ $(document).ready(function()
     
 
 
-
+    //alert(screen.width + "+"+ screen.height);
      
     //Starts whack sound
     //var whackSound = new Audio('audio/Whack Sound Effect.mp3');
     
     var score = 0;
-    $("#score").text("Score: " + score + " " + screen.width + "+"+ screen.height);
+    $("#score").text("Score: " + score );
     var timer = 0;
     $("#timer").text("Timer: " + timer);
     var whackImages = [];
@@ -171,8 +171,8 @@ $(document).ready(function()
     
     function makeCorrectSize()
     {
-        $('body').css('height', screen.height + 'px');
-        $('body').css('width', screen.width + 'px');
+        $('#whackDiv').css('height', screen.height + 'px');
+        $("#whackDiv").css('width', screen.width + 'px');
     }
     
 });
